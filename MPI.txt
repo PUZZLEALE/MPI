@@ -1,0 +1,31 @@
+#include <iostream>                   
+#include <stdlib.h>                   
+#include <stdio.h>                    
+#include <iomanip>                    
+#include <cmath>                      
+
+using namespace std;                  
+double factorial(int n){              
+	double aux=1;                     
+	for(int i = 2; i<=n ; i++){       
+		aux *= i;                     
+	}
+	return aux;                       
+}
+double e(int n){                     
+	double sum = 0;                   
+	for(int i = 0; i < n; i++){       
+		sum += 1/factorial(i);      
+	}
+	return sum;                     
+}
+
+
+
+int main (){                          
+	int n;
+	cout <<"Cuantos variables son: ";
+	cin  >> n;
+	printf("e = %f",e(n));
+	
+}
